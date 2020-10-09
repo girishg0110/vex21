@@ -76,10 +76,10 @@ void autonomous() {}
 void opcontrol() {
 	// 21 11 10 1
 	pros::Controller master(pros::E_CONTROLLER_MASTER);
-	pros::Motor fLeft(21);
-	pros::Motor fRight(11);
-	pros::Motor bLeft(10);
-	pros::Motor bRight(1);
+	pros::Motor fLeft(10);
+	pros::Motor fRight(4);
+	pros::Motor bLeft(8);
+	pros::Motor bRight(3);
 
 	int left, right;
 	while (true) {

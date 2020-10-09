@@ -90,8 +90,8 @@ void opcontrol() {
 		fLeft.move(left);
 		bLeft.move(left);
 		// Right motors
-		fRight.move(right);
-		bRight.move(right);
+		fRight.move(-right);
+		bRight.move(-right);
 
 		pros::delay(20);
 	}

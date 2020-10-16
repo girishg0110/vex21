@@ -98,8 +98,8 @@ void opcontrol() {
 		L1Lift.move(-127 * lift_left);
 		L2Lift.move(-127 * lift_left);
 		// Right lifting
-		R1Lift.move(60 * lift_right);
-		R2Lift.move(60 * lift_right);
+		R1Lift.move(127 * lift_right);
+		R2Lift.move(127 * lift_right);
 
 		// Left motors
 		fLeft.move(left);

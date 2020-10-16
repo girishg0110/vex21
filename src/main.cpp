@@ -87,19 +87,17 @@ void opcontrol() {
 	pros::Motor R2Lift(2);
 
 	int left, right;
-	int lift_left, lift_right;
+	int lift;
 	while (true) {
 		left = master.get_analog(ANALOG_LEFT_Y);
 		right = master.get_analog(ANALOG_RIGHT_Y);
-		lift_left = master.get_digital(DIGITAL_L2);
-		lift_right = master.get_digital(DIGITAL_R2);
+		lift = master.get_digital(DIGITAL_L2) - master.get_digital(DIGITAL_R2);
 
 		// Left lifting
-		L1Lift.move(-127 * lift_left);
-		L2Lift.move(-127 * lift_left);
-		// Right lifting
-		R1Lift.move(127 * lift_right);
-		R2Lift.move(127 * lift_right);
+		L1Lift.move(127 * lift);
+		L2Lift.move(127 * lift);
+		R1Lift.move(-127 * lift);
+		R2Lift.move(-127 * lift);
 
 		// Left motors
 		fLeft.move(left);

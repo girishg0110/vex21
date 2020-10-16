@@ -95,8 +95,8 @@ void opcontrol() {
 		lift_right = master.get_digital(DIGITAL_R2);
 
 		// Left lifting
-		L1Lift.move(60 * lift_left);
-		L2Lift.move(60 * lift_left);
+		L1Lift.move(-60 * lift_left);
+		L2Lift.move(-60 * lift_left);
 		// Right lifting
 		R1Lift.move(60 * lift_right);
 		R2Lift.move(60 * lift_right);
